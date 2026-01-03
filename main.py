@@ -4,6 +4,7 @@ import asteroid as a
 import asteroidfield as af
 import shot
 from constants import *
+from logger import log_state
 
 def main():
     pygame.init()
@@ -26,6 +27,7 @@ def main():
     astroid_field = af.AsteroidField()
 
     while True:
+        log_state()
         screen.fill("black")
         updatable.update(dt)
 
